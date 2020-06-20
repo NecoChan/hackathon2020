@@ -7,7 +7,7 @@ import time
 
 
 def take_posts():
-    token = '66efa73366efa73366efa733ea669d17a7666ef66efa73338034d48ba775c8f77625403'
+    token = 'CAACAgIAAxkBAAL1vl7uKPQSsctXGSmH6_QegrViIHEcAAIBAAPVVI0rGyakprAacEoaBA'
     version = 5.92
     domain = 'foodsharing_spb'
     count = 10
@@ -91,7 +91,8 @@ def start(message):
     set_city = types.InlineKeyboardMarkup(row_width = 2)
     spb = types.InlineKeyboardButton(text = "Санк-Петербург", callback_data = "spb")
     msk = types.InlineKeyboardButton(text = "Москва", callback_data = "msk")
-    set_city.add(spb,msk)
+    set_city.add(spb, msk)
+    bot.send_sticker(message.chat.id, 'CAACAgIAAxkBAAL1vl7uKPQSsctXGSmH6_QegrViIHEcAAIBAAPVVI0rGyakprAacEoaBA')
     bot.send_message(message.chat.id, f"""
 Приветствую тебя,{message.from_user.first_name}.
 
